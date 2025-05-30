@@ -17,4 +17,9 @@ app.add_middleware(
 async def login(username: str = Form(...), password: str = Form(...)):
     if username == "admin" and password == "1234":
         return {"status": "ok"}
+fake_users = {
+    "admin": "admin123",
+    "user": "password",
+    "fernando": "claveSegura"
+}
     return {"status": "error"}
